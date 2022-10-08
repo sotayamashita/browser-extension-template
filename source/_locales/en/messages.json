@@ -1,0 +1,11 @@
+{
+    "extensionName": {
+        "message": "Browser Extension Template",
+        "description": "Name of the extension"
+    },
+
+    "extensionDescription": {
+        "message": "Let's build awesome browser extension!",
+        "description": "Description of the extension"
+    }
+}

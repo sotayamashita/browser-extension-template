@@ -1,0 +1,11 @@
+{
+    "extensionName": {
+        "message": "Browser Extension テンプレート",
+        "description": "Browser Extension の名前"
+    },
+
+    "extensionDescription": {
+        "message": "素晴らしいブラウザ拡張機能を作ろう！",
+        "description": "Browser Extension の説明"
+    }
+}
