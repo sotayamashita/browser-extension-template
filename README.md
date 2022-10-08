@@ -1,4 +1,4 @@
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template?ref=badge_shield) [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ### Development
