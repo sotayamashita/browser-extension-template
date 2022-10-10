@@ -1,16 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "build": "parcel build source/manifest.json --dist-dir distribution --no-content-hash --no-source-maps --no-cache --detailed-report 0",
-    "watch": "parcel watch source/manifest.json --dist-dir distribution",
-    "start:chrome": "web-ext run -t chromium --source-dir distribution --start-url https://example.com"
+    "build": "npx parcel build source/manifest.json --dist-dir distribution --no-content-hash --no-source-maps --no-cache --detailed-report 0",
+    "watch": "npx parcel watch source/manifest.json --dist-dir distribution",
+    "start:chrome": "npx web-ext run -t chromium --source-dir distribution --start-url https://example.com"
   },
   "dependencies": {
-    "webext-base-css": "^1.4.2"
+    "webext-base-css": "^1.4.2",
+    "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
     "@parcel/config-webextension": "^2.7.0",
-    "parcel": "^2.7.0",
-    "web-ext": "^7.2.0"
+    "@types/webextension-polyfill": "^0.9.1"
   }
 }

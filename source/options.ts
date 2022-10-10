@@ -1,4 +1,5 @@
 import 'webext-base-css';
+import browser from 'webextension-polyfill';
 
 let page = document.getElementById("buttonDiv");
 let selectedClassName = "current";
@@ -18,15 +19,14 @@ function handleButtonClick(event) {
   // Mark the button as selected
   let color = event.target.dataset.color;
   event.target.classList.add(selectedClassName);
-  chrome.storage.sync.set({ color });
+  browser.storage.sync.set({ color });
 }
 
 // Add a button to the page for each supplied color
 function constructOptions(buttonColors) {
-  chrome.storage.sync.get("color", (data) => {
-    let currentColor = data.color;
+  let currentColor = browser.storage.sync.get('color')
 
-    // For each color we were provided…
+  // For each color we were provided…
     for (let buttonColor of buttonColors) {
       // …crate a button with that color…
       let button = document.createElement("button");
@@ -40,9 +40,10 @@ function constructOptions(buttonColors) {
 
       // …and register a listener for when that button is clicked
       button.addEventListener("click", handleButtonClick);
-      page.appendChild(button);
+      if (page) {
+        page.appendChild(button);
+      }
     }
-  });
 }
 
 // Initialize the page by constructing the color options

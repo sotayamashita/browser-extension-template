@@ -1,12 +1,8 @@
 {
-  "name": "__MSG_extensionName__",
-  "description": "__MSG_extensionDescription__",
-  "version": "1.0",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "name": "__MSG_extensionName__",
+  "version": "1.0",
+
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -16,15 +12,21 @@
       "128": "./images/get_started128.png"
     }
   },
+  "default_locale": "en",
+  "description": "__MSG_extensionDescription__",
   "icons": {
     "16": "./images/get_started16.png",
     "32": "./images/get_started32.png",
     "48": "./images/get_started48.png",
     "128": "./images/get_started128.png"
   },
+  
+  "background": {
+    "service_worker": "background.ts"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
   "options_ui": {
     "browser_style": true,
 		"page": "options.html"
-  },
-  "default_locale": "en"
+  }
 }
