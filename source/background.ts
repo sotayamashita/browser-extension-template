@@ -1,6 +1,9 @@
-let color = '#3aa757';
+import * as browser from "webextension-polyfill";
+import isDevelopmentVersion from "./helpers/is-development-version";
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ color });
-  console.log('Default background color set to %cgreen', `color: ${color}`);
+browser.runtime.onInstalled.addListener(({ reason }) => {
+  // Only if the reason is explicitly "install"
+  if (!!isDevelopmentVersion() && reason === "install") {
+    console.log("First Install");
+  }
 });
