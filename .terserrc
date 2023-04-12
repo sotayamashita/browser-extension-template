@@ -1,0 +1,6 @@
+{
+    "mangle": false,
+    "output": {
+        "indent_level": 2
+    }
+}
