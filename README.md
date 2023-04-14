@@ -4,4 +4,8 @@
 [renovate-url]: https://renovateapp.com
 [renovate-svg]: https://img.shields.io/static/v1?label=renovate&message=enabled&color=1A1F6C&style=flat&logo=renovatebot
 
-[![renovate status][renovate-svg]][renovate-url] [![fossa status][fossa-svg]][fossa-url]
+[license-url]: LICENSE
+[license-svg]: https://img.shields.io/github/license/sotayamashita/browser-extension-template
+
+[![license status][license-svg]][license-url] [![renovate status][renovate-svg]][renovate-url] [![fossa status][fossa-svg]][fossa-url]
+
