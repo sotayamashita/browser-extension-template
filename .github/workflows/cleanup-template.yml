@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  # Run a cleaning process only if the workflow is triggered by the non-"browser-extension-template" repository.
+  # Clean only if workflow triggered by repo other than "browser-extension-template".
   cleanup:
     runs-on: ubuntu-latest
 
