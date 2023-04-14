@@ -1,0 +1,28 @@
+# GitHub Actions Workflow removes template-specific files and configurations,
+# and is triggered automatically when a new template-based repository is created.
+
+name: Cleanup template
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # Run a cleaning process only if the workflow is triggered by the non-"browser-extension-template" repository.
+  cleanup:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    if: github.event.repository.name != 'browser-extension-template'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cleanup
+        run: |
+          rm -f \
+            .github/workflows/cleanup-template.yml
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Cleanup template
