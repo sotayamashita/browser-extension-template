@@ -4,7 +4,6 @@
     "node": "18.16.0"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "build": "parcel build source/manifest.json --dist-dir distribution --no-content-hash --no-source-maps --no-cache --detailed-report 0",
     "watch": "parcel watch source/manifest.json --dist-dir distribution",
