@@ -8,7 +8,7 @@ on:
 
 jobs:
   # Clean only if workflow triggered by repo other than "browser-extension-template".
-  cleanup:
+  cleanup-template:
     runs-on: ubuntu-latest
 
     permissions:
