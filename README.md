@@ -7,9 +7,22 @@
 [license-url]: LICENSE
 [license-svg]: https://img.shields.io/github/license/sotayamashita/browser-extension-template
 
-# browser-extension-template
+[bug-url]: https://github.com/sotayamashita/browser-extension-template/issues/new?labels=bug&template=BUG_REPORT.md&title=bug%3A+
+[req-url]: https://github.com/sotayamashita/browser-extension-template/issues/new?labels=enhancement&template=FEATURE_REQUEST.md&title=feat%3A+
+[qus-url]: https://github.com/sotayamashita/browser-extension-template/issues/new?labels=question&template=SUPPORT_QUESTION.md&title=support%3A+
 
-[![license status][license-svg]][license-url] [![renovate status][renovate-svg]][renovate-url] [![fossa status][fossa-svg]][fossa-url]
+<div align="center">
+  <h2>browser-extension-template</h2>
+</div>
+
+<div align="center">
+
+  [Report a Bug][bug-url] · [Request a Feature][req-url] · [Ask a Question][qus-url]
+  
+  [![license status][license-svg]][license-url] [![renovate status][renovate-svg]][renovate-url] [![fossa status][fossa-svg]][fossa-url]
+</div>
+
+---
 
 ## Show your support
 
