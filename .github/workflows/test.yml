@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Setup
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+
+      - run: node -v
+
+      - run: npm -v
+
+      - run: npm ci
+
+      # Lint
+      - run: npm run format:check

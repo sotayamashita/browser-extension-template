@@ -9,8 +9,8 @@
     "build": "parcel build source/manifest.json --dist-dir distribution --no-content-hash --no-source-maps --no-cache --detailed-report 0",
     "watch": "parcel watch source/manifest.json --dist-dir distribution",
     "start:chrome": "npx web-ext run -t chromium --source-dir distribution --start-url https://example.com",
-    "format": "prettier --check \"**/*.(ts|tsx|js|md|json|css)\"",
-    "format:fix": "prettier --write \"**/*.(ts|tsx|js|md|json|css)\""
+    "format": "prettier --write \"**/*.(ts|tsx|js|md|json|css)\"",
+    "format:check": "prettier --check \"**/*.(ts|tsx|js|md|json|css)\""
   },
   "dependencies": {
     "webext-base-css": "^1.4.2",
