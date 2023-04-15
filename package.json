@@ -5,7 +5,7 @@
     "npm": "9.6.4"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
     "build": "parcel build source/manifest.json --dist-dir distribution --no-content-hash --no-source-maps --no-cache --detailed-report 0",
     "watch": "parcel watch source/manifest.json --dist-dir distribution",
     "start:chrome": "npx web-ext run -t chromium --source-dir distribution --start-url https://example.com",
@@ -20,6 +20,7 @@
     "@parcel/config-webextension": "^2.7.0",
     "@types/webextension-polyfill": "^0.10.0",
     "husky": "^8.0.0",
+    "is-ci": "^3.0.1",
     "lint-staged": "^13.2.0",
     "parcel": "^2.7.0",
     "prettier": "^2.8.7"
