@@ -1,1 +1,4 @@
-{}
+{
+  "timeout": "20s",
+  "retryCount": 5
+}
