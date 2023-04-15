@@ -7,5 +7,10 @@
 [license-url]: LICENSE
 [license-svg]: https://img.shields.io/github/license/sotayamashita/browser-extension-template
 
+# browser-extension-template
+
 [![license status][license-svg]][license-url] [![renovate status][renovate-svg]][renovate-url] [![fossa status][fossa-svg]][fossa-url]
 
+## Show your support
+
+Give a ⭐️ if this project helped you!
