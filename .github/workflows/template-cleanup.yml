@@ -22,6 +22,7 @@ jobs:
       - name: Cleanup
         run: |
           rm -f \
+            LICENSE \
             .github/workflows/cleanup-template.yml
 
       - uses: stefanzweifel/git-auto-commit-action@v4
