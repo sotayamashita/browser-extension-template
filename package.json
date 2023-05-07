@@ -13,7 +13,8 @@
     "format": "prettier --check \"**/*.(ts|tsx|js|md|json|css)\""
   },
   "dependencies": {
-    "webext-base-css": "^1.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
@@ -23,6 +24,9 @@
     "is-ci": "^3.0.1",
     "lint-staged": "^13.2.0",
     "parcel": "^2.7.0",
-    "prettier": "^2.8.7"
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "tailwindcss": "^3.3.2"
   }
 }
