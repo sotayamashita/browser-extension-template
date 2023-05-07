@@ -11,7 +11,9 @@ browser.runtime.onInstalled.addListener(({ reason }) => {
  * Open the welcome page in a new tab when the extension is installed.
  */
 function showWelcomePage() {
-  browser.tabs.create({ url: "https://example.com/welcome" });
+  browser.tabs.create({
+    url: "https://sotayamashita.github.io/browser-extension-template/welcome",
+  });
 }
 
 /**
@@ -19,5 +21,7 @@ function showWelcomePage() {
  * @see https://developer.chrome.com/docs/extensions/reference/runtime/#example-uninstall-url
  */
 function setUninstallURL() {
-  browser.runtime.setUninstallURL("https://example.com/uninstall");
+  browser.runtime.setUninstallURL(
+    "https://sotayamashita.github.io/browser-extension-template/uninstall"
+  );
 }
