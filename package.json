@@ -1,7 +1,7 @@
 {
   "private": true,
   "volta": {
-    "node": "18.16.0",
+    "node": "18.19.1",
     "npm": "9.8.1"
   },
   "scripts": {
