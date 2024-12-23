@@ -1,2 +1,2 @@
-// eslint-disable-next-line import/no-unassigned-import
+import 'webext-base-css';
 import './options-storage.js';
