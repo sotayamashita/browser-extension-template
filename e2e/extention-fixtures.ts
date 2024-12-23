@@ -7,6 +7,7 @@ export const test = base.extend<{
 	extensionId: string;
 	optionsPage: string;
 }>({
+	// eslint-disable-next-line no-empty-pattern
 	async context({}, use) {
 		const pathToExtension = path.join(__dirname, "../distribution");
 		const context = await chromium.launchPersistentContext("", {
@@ -28,6 +29,7 @@ export const test = base.extend<{
 		const extensionId = background.url().split("/")[2];
 		await use(extensionId);
 	},
+	// eslint-disable-next-line no-empty-pattern
 	async optionsPage({}, use) {
 		const distDir = path.join(__dirname, "../distribution");
 		const files = fs.readdirSync(distDir);

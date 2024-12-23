@@ -1,6 +1,7 @@
 {
 	"private": true,
 	"scripts": {
+		"prebuild": "rm -rf distribution",
 		"build": "NODE_NO_WARNINGS=1 parcel build",
 		"lint": "run-p lint:*",
 		"lint:eslint": "eslint .",
@@ -15,13 +16,14 @@
 	},
 	"dependencies": {
 		"webext-base-css": "^2.0.1",
-		"webext-options-sync": "^4.2.3"
+		"webext-options-sync": "^4.3.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.17.0",
 		"@parcel/config-webextension": "^2.13.0",
 		"@parcel/resolver-default": "^2.13.0",
 		"@playwright/test": "^1.49.1",
+		"@types/chrome": "^0.0.287",
 		"@types/node": "^22.10.2",
 		"eslint": "^9.17.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -30,7 +32,9 @@
 		"lint-staged": "^15.2.11",
 		"npm-run-all2": "^7.0.1",
 		"parcel": "^2.13.0",
-		"prettier": "3.4.2"
+		"prettier": "3.4.2",
+		"typescript": "^5.7.2",
+		"typescript-eslint": "^8.18.1"
 	},
 	"@parcel/resolver-default": {
 		"packageExports": true
