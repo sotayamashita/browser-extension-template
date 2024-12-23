@@ -1,2 +1,2 @@
-import 'webext-base-css';
-import './options-storage.js';
+import "webext-base-css";
+import "./options-storage.js";
