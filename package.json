@@ -4,6 +4,7 @@
 		"prebuild": "rm -rf distribution",
 		"build": "NODE_NO_WARNINGS=1 parcel build",
 		"lint": "run-p lint:*",
+		"lint:typescript": "tsc --noEmit",
 		"lint:eslint": "eslint .",
 		"lint:prettier": "prettier --check .",
 		"fix": "run-p fix:*",
@@ -15,6 +16,10 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@types/react": "^19.0.2",
+		"@types/react-dom": "^19.0.2",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
 		"webext-base-css": "^2.0.1",
 		"webext-options-sync": "^4.3.0"
 	},
@@ -27,12 +32,14 @@
 		"@types/node": "^22.10.2",
 		"eslint": "^9.17.0",
 		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-react": "^7.37.2",
 		"globals": "^15.14.0",
 		"husky": "^9.1.7",
 		"lint-staged": "^15.2.11",
 		"npm-run-all2": "^7.0.1",
 		"parcel": "^2.13.0",
 		"prettier": "3.4.2",
+		"process": "^0.11.10",
 		"typescript": "^5.7.2",
 		"typescript-eslint": "^8.18.1"
 	},
