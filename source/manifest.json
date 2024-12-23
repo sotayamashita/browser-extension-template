@@ -15,17 +15,13 @@
 	"icons": {
 		"128": "icon.png"
 	},
-	"permissions": [
-		"storage"
-	],
-	"host_permissions": [
-		"https://github.com/*"
-	],
+	"permissions": ["storage"],
+	"host_permissions": ["https://github.com/*"],
 	"content_scripts": [
 		{
-			"matches": [ "https://github.com/fregante/browser-extension-template/*" ],
-			"js": [ "content.js" ],
-			"css": [ "content.css" ],
+			"matches": ["https://github.com/fregante/browser-extension-template/*"],
+			"js": ["content.js"],
+			"css": ["content.css"],
 			"run_at": "document_end"
 		}
 	],
@@ -35,6 +31,6 @@
 	"background": {
 		"service_worker": "background.js",
 		"type": "module",
-		"scripts": [ "background.js" ]
+		"scripts": ["background.js"]
 	}
 }
