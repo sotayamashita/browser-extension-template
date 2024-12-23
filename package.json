@@ -9,7 +9,8 @@
 		"fix:eslint": "npm run lint:eslint -- --fix",
 		"fix:prettier": "npm run lint:prettier -- --write",
 		"test": "run-p lint:* build",
-		"watch": "NODE_NO_WARNINGS=1 parcel watch --no-hmr"
+		"watch": "NODE_NO_WARNINGS=1 parcel watch --no-hmr",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"webext-base-css": "^2.0.1",
@@ -22,6 +23,8 @@
 		"eslint": "^9.17.0",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.14.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.2.11",
 		"npm-run-all2": "^7.0.1",
 		"parcel": "^2.13.0",
 		"prettier": "3.4.2"
