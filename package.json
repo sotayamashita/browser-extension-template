@@ -3,8 +3,10 @@
 	"scripts": {
 		"build": "NODE_NO_WARNINGS=1 parcel build",
 		"lint": "run-p lint:*",
+		"lint:eslint": "eslint .",
 		"lint:prettier": "prettier --check .",
 		"fix": "run-p fix:*",
+		"fix:eslint": "npm run lint:eslint -- --fix",
 		"fix:prettier": "npm run lint:prettier -- --write",
 		"test": "run-p lint:* build",
 		"watch": "NODE_NO_WARNINGS=1 parcel watch --no-hmr"
@@ -14,8 +16,12 @@
 		"webext-options-sync": "^4.2.3"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.17.0",
 		"@parcel/config-webextension": "^2.13.0",
 		"@parcel/resolver-default": "^2.13.0",
+		"eslint": "^9.17.0",
+		"eslint-config-prettier": "^9.1.0",
+		"globals": "^15.14.0",
 		"npm-run-all2": "^7.0.1",
 		"parcel": "^2.13.0",
 		"prettier": "3.4.2"
