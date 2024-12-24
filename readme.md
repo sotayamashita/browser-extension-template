@@ -21,6 +21,26 @@ Screenshot of extension options:
 - [Auto-syncing options](#auto-syncing-options).
 - [Auto-publishing](#publishing) with auto-versioning and support for manual releases.
 
+### Diff from the original [`fregante/browser-extension-template`](https://github.com/fregante/browser-extension-template)
+
+```diff
+- xo
+- stylelint
++ React
++ TypeScript
++ with Prettier / Husky / lint-staged for linting
++ with Playwright for E2E tests
++ with Shadcn/UI and TailwindCSS for UI Components
+```
+
+Related PRs:
+- [Remove xo, eslint, and stylelint #5](https://github.com/sotayamashita/browser-extension-template/pull/5)
+- [Add Prettier, husky and lint-staged #8](https://github.com/sotayamashita/browser-extension-template/pull/8)
+- [Add Playwright for E2E tests #11](https://github.com/sotayamashita/browser-extension-template/pull/11)
+- [Add TypeScript #17](https://github.com/sotayamashita/browser-extension-template/pull/17)
+- [Add React #18](https://github.com/sotayamashita/browser-extension-template/pull/18)
+- [Add shadcn/ui with tailwind #21](https://github.com/sotayamashita/browser-extension-template/pull/21)
+
 ## Getting started
 
 ### 1️⃣ Create your own copy
