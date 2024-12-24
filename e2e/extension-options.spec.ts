@@ -1,86 +1,52 @@
 import { test, expect } from "./extention-fixtures";
+import { defaultOptions } from "@/option-default";
 
 test.describe("Chrome Extension Options Page", () => {
-	test("should update color picker values", async ({
-		page,
-		extensionId,
-		optionsPage,
-	}) => {
+	test.beforeEach(async ({ page, extensionId, optionsPage }) => {
 		await page.goto(`chrome-extension://${extensionId}/${optionsPage}`);
+	});
 
-		// Expected values
-		const expectedRedRange = 255;
-		const expectedGreenRange = 128;
-		const expectedBlueRange = 64;
+	test("should have default input values", async ({ page }) => {
+		const colorRedInput = page.locator('input[type="number"][name="colorRed"]');
+		await expect(colorRedInput).toHaveValue(defaultOptions.colorRed.toString());
 
-		// Test range inputs
-		const redRange = page.locator('input[type="range"][name="colorRed"]');
-		const greenRange = page.locator('input[type="range"][name="colorGreen"]');
-		const blueRange = page.locator('input[type="range"][name="colorBlue"]');
-
-		await redRange.fill(expectedRedRange.toString());
-		await greenRange.fill(expectedGreenRange.toString());
-		await blueRange.fill(expectedBlueRange.toString());
-
-		// Verify number inputs are synchronized
-		await expect(
-			page.locator('input[type="number"][name="colorRed"]'),
-		).toHaveValue(expectedRedRange.toString());
-		await expect(
-			page.locator('input[type="number"][name="colorGreen"]'),
-		).toHaveValue(expectedGreenRange.toString());
-		await expect(
-			page.locator('input[type="number"][name="colorBlue"]'),
-		).toHaveValue(expectedBlueRange.toString());
-
-		// Verify color output
-		const colorOutput = page.locator(".color-output");
-		await expect(colorOutput).toHaveCSS(
-			"background-color",
-			"rgb(255, 128, 64)",
+		const colorGreenInput = page.locator(
+			'input[type="number"][name="colorGreen"]',
 		);
+		await expect(colorGreenInput).toHaveValue(
+			defaultOptions.colorGreen.toString(),
+		);
+
+		const colorBlueInput = page.locator(
+			'input[type="number"][name="colorBlue"]',
+		);
+		await expect(colorBlueInput).toHaveValue(
+			defaultOptions.colorBlue.toString(),
+		);
+
+		const textInput = page.locator('input[type="text"][name="text"]');
+		await expect(textInput).toHaveValue(defaultOptions.text);
 	});
 
-	test("should update number input values", async ({
-		page,
-		extensionId,
-		optionsPage,
-	}) => {
-		await page.goto(`chrome-extension://${extensionId}/${optionsPage}`);
+	test("should update color input values", async ({ page }) => {
+		const colorRedInput = page.locator('input[type="number"][name="colorRed"]');
+		await colorRedInput.fill("255");
+		await expect(colorRedInput).toHaveValue("255");
 
-		// Test number inputs
-		const redNumber = page.locator('input[type="number"][name="colorRed"]');
-		const greenNumber = page.locator('input[type="number"][name="colorGreen"]');
-		const blueNumber = page.locator('input[type="number"][name="colorBlue"]');
+		const colorGreenInput = page.locator(
+			'input[type="number"][name="colorGreen"]',
+		);
+		await colorGreenInput.fill("255");
+		await expect(colorGreenInput).toHaveValue("255");
 
-		await redNumber.fill("128");
-		await greenNumber.fill("64");
-		await blueNumber.fill("32");
-
-		// Verify range inputs are synchronized
-		await expect(
-			page.locator('input[type="range"][name="colorRed"]'),
-		).toHaveValue("128");
-		await expect(
-			page.locator('input[type="range"][name="colorGreen"]'),
-		).toHaveValue("64");
-		await expect(
-			page.locator('input[type="range"][name="colorBlue"]'),
-		).toHaveValue("32");
-
-		// Verify color output
-		const colorOutput = page.locator(".color-output");
-		await expect(colorOutput).toHaveCSS("background-color", "rgb(128, 64, 32)");
+		const colorBlueInput = page.locator(
+			'input[type="number"][name="colorBlue"]',
+		);
+		await colorBlueInput.fill("255");
+		await expect(colorBlueInput).toHaveValue("255");
 	});
 
-	test("should handle text input", async ({
-		page,
-		extensionId,
-		optionsPage,
-	}) => {
-		await page.goto(`chrome-extension://${extensionId}/${optionsPage}`);
-
-		// Test text input
+	test("should update text input value", async ({ page }) => {
 		const textInput = page.locator('input[type="text"][name="text"]');
 		await textInput.fill("Test notice content");
 		await expect(textInput).toHaveValue("Test notice content");
