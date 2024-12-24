@@ -12,7 +12,7 @@
 
 Screenshot of extension options:
 
-![Sample extension options output](media/previewer.png)
+<img src="media/previewer.png" alt="Sample extension options output" width="500" />
 
 ## Features
 
