@@ -2,7 +2,6 @@ import "@/global.css";
 import optionsStorage from "@/options-storage";
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
@@ -63,6 +62,7 @@ function OptionsPage() {
 									<Label>{color}</Label>
 									<Input
 										type="number"
+										name={`color${color}`}
 										min="0"
 										max="255"
 										className="w-20"
@@ -104,6 +104,7 @@ function OptionsPage() {
 						<Input
 							id="notice-text"
 							type="text"
+							name="text"
 							value={text}
 							onChange={(e) => setText(e.target.value)}
 						/>
