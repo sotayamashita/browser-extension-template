@@ -10,9 +10,11 @@
 
 > Cross-browser extension boilerplate - barebones template with Parcel 2, options handler and auto-publishing.
 
-Screenshot of extension options:
+Screenshot of extension:
 
-<img src="media/previewer.png" alt="Sample extension options output" width="500" />
+| Options                                                                                     | Popup                                                                                   |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| <img src="media/options-previewer.png" alt="Sample extension options output" width="300" /> | <img src="media/popup-previewer.png" alt="Sample extension popup output" width="300" /> |
 
 ## Features
 
