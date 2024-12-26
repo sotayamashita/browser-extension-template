@@ -11,7 +11,7 @@
 		"fix:eslint": "npm run lint:eslint -- --fix",
 		"fix:prettier": "npm run lint:prettier -- --write",
 		"test": "run-p lint:* build",
-		"test:e2e": "playwright test",
+		"test:e2e": "npm run build && playwright test",
 		"watch": "NODE_NO_WARNINGS=1 parcel watch --no-hmr",
 		"prepare": "husky"
 	},
