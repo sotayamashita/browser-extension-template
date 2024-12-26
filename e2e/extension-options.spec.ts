@@ -43,10 +43,15 @@ test.describe("Chrome Extension Options Page", () => {
 			text: "Persistence test",
 		};
 
+		// Magic number
+		await page.waitForTimeout(1000);
+
 		// Update all input values
 		for (const [name, value] of Object.entries(testValues)) {
 			const input = page.locator(`input[name="${name}"]`);
 			await input.fill(value);
+			// Wait for storage to be updated
+			await page.waitForTimeout(1000);
 		}
 
 		// Reload the page to see the changes
