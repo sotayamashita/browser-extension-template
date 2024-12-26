@@ -12,18 +12,18 @@ test.describe("Chrome Extension Options Page", () => {
 	});
 
 	test("should have default color values", async ({ page }) => {
-		const colorRedInput = page.locator('input[type="range"][name="colorRed"]');
+		const colorRedInput = page.locator('input[type="number"][name="colorRed"]');
 		await expect(colorRedInput).toHaveValue(defaultOptions.colorRed.toString());
 
 		const colorGreenInput = page.locator(
-			'input[type="range"][name="colorGreen"]',
+			'input[type="number"][name="colorGreen"]',
 		);
 		await expect(colorGreenInput).toHaveValue(
 			defaultOptions.colorGreen.toString(),
 		);
 
 		const colorBlueInput = page.locator(
-			'input[type="range"][name="colorBlue"]',
+			'input[type="number"][name="colorBlue"]',
 		);
 		await expect(colorBlueInput).toHaveValue(
 			defaultOptions.colorBlue.toString(),
@@ -36,28 +36,26 @@ test.describe("Chrome Extension Options Page", () => {
 	});
 
 	test("should persist values after reload", async ({ page }) => {
-		// Update values
-		const colorRedInput = page.locator('input[type="range"][name="colorRed"]');
-		const colorGreenInput = page.locator(
-			'input[type="range"][name="colorGreen"]',
-		);
-		const colorBlueInput = page.locator(
-			'input[type="range"][name="colorBlue"]',
-		);
-		const textInput = page.locator('input[type="text"][name="text"]');
+		const testValues = {
+			colorRed: "0",
+			colorGreen: "0",
+			colorBlue: "0",
+			text: "Persistence test",
+		};
 
-		await colorRedInput.fill("200");
-		await colorGreenInput.fill("150");
-		await colorBlueInput.fill("100");
-		await textInput.fill("Persistence test");
+		// Update all input values
+		for (const [name, value] of Object.entries(testValues)) {
+			const input = page.locator(`input[name="${name}"]`);
+			await input.fill(value);
+		}
 
 		// Reload the page to see the changes
 		await page.reload();
 
-		// Verify values persist
-		await expect(colorRedInput).toHaveValue("200");
-		await expect(colorGreenInput).toHaveValue("150");
-		await expect(colorBlueInput).toHaveValue("100");
-		await expect(textInput).toHaveValue("Persistence test");
+		// Verify all values persist after reload
+		for (const [name, value] of Object.entries(testValues)) {
+			const input = page.locator(`input[name="${name}"]`);
+			await expect(input).toHaveValue(value);
+		}
 	});
 });

@@ -34,7 +34,7 @@ export function ColorPicker({ colors, onColorChange }: ColorPickerProps) {
 								min="0"
 								max="255"
 								className="w-20"
-								value={colors[`color${color}` as keyof typeof colors]}
+								value={colors[`${color}` as keyof typeof colors]}
 								onChange={(e) =>
 									onColorChange(
 										`color${color}` as keyof typeof colors,
