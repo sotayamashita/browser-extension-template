@@ -34,6 +34,7 @@ Screenshot of extension options:
 ```
 
 Related PRs:
+
 - [Remove xo, eslint, and stylelint #5](https://github.com/sotayamashita/browser-extension-template/pull/5)
 - [Add Prettier, husky and lint-staged #8](https://github.com/sotayamashita/browser-extension-template/pull/8)
 - [Add Playwright for E2E tests #11](https://github.com/sotayamashita/browser-extension-template/pull/11)
