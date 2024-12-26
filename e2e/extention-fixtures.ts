@@ -6,6 +6,7 @@ export const test = base.extend<{
 	context: BrowserContext;
 	extensionId: string;
 	optionsPage: string;
+	popupPage: string;
 }>({
 	// eslint-disable-next-line no-empty-pattern
 	async context({}, use) {
@@ -22,6 +23,7 @@ export const test = base.extend<{
 		await use(context);
 		await context.close();
 	},
+
 	async extensionId({ context }, use) {
 		let [background] = context.serviceWorkers();
 		background ||= await context.waitForEvent("serviceworker");
@@ -29,6 +31,7 @@ export const test = base.extend<{
 		const extensionId = background.url().split("/")[2];
 		await use(extensionId);
 	},
+
 	// eslint-disable-next-line no-empty-pattern
 	async optionsPage({}, use) {
 		const distDir = path.join(__dirname, "../distribution");
@@ -41,6 +44,20 @@ export const test = base.extend<{
 		}
 
 		await use(optionsFile);
+	},
+
+	// eslint-disable-next-line no-empty-pattern
+	async popupPage({}, use) {
+		const distDir = path.join(__dirname, "../distribution");
+		const files = fs.readdirSync(distDir);
+		const popupFile = files.find(
+			(file) => file.startsWith("popup.") && file.endsWith(".html"),
+		);
+		if (!popupFile) {
+			throw new Error("Popup page not found in dist directory");
+		}
+
+		await use(popupFile);
 	},
 });
 export const expect = test.expect;

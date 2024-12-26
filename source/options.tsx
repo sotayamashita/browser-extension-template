@@ -1,10 +1,9 @@
 import "@/global.css";
 import optionsStorage from "@/options-storage";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Slider } from "@/components/ui/slider";
+import { ColorPicker } from "@/components/common/color-picker";
+import { NoticeContent } from "@/components/common/notice-content";
 
 function OptionsPage() {
 	const [colors, setColors] = useState({
@@ -37,11 +36,6 @@ function OptionsPage() {
 		optionsStorage.set({ text });
 	}, [text]);
 
-	const handleColorChange =
-		(color: keyof typeof colors) => (value: number[]) => {
-			setColors((prev) => ({ ...prev, [color]: value[0].toString() }));
-		};
-
 	return (
 		<div className="container mx-auto max-w-2xl p-4">
 			<div className="space-y-0.5">
@@ -53,63 +47,13 @@ function OptionsPage() {
 				className="my-6 h-px w-full shrink-0 bg-border"
 			></div>
 			<form id="options-form" className="space-y-6">
-				<div className="space-y-4">
-					<h3 className="text-lg font-medium">Color Picker</h3>
-					<div className="space-y-4">
-						{(["Red", "Green", "Blue"] as const).map((color) => (
-							<div key={color} className="space-y-2">
-								<div className="flex items-center justify-between">
-									<Label>{color}</Label>
-									<Input
-										type="number"
-										name={`color${color}`}
-										min="0"
-										max="255"
-										className="w-20"
-										value={colors[`color${color}` as keyof typeof colors]}
-										onChange={(e) =>
-											setColors((prev) => ({
-												...prev,
-												[`color${color}`]: e.target.value,
-											}))
-										}
-									/>
-								</div>
-								<Slider
-									min={0}
-									max={255}
-									step={1}
-									value={[
-										Number(colors[`color${color}` as keyof typeof colors]),
-									]}
-									onValueChange={handleColorChange(
-										`color${color}` as keyof typeof colors,
-									)}
-								/>
-							</div>
-						))}
-						<div
-							className="mt-4 h-20 w-full rounded-md"
-							style={{
-								backgroundColor: `rgb(${colors.colorRed}, ${colors.colorGreen}, ${colors.colorBlue})`,
-							}}
-						/>
-					</div>
-				</div>
-
-				<div className="space-y-4">
-					<h3 className="text-lg font-medium">Notice Content</h3>
-					<div className="space-y-2">
-						<Label htmlFor="notice-text">Text</Label>
-						<Input
-							id="notice-text"
-							type="text"
-							name="text"
-							value={text}
-							onChange={(e) => setText(e.target.value)}
-						/>
-					</div>
-				</div>
+				<ColorPicker
+					colors={colors}
+					onColorChange={(color, value) =>
+						setColors((prev) => ({ ...prev, [color]: value }))
+					}
+				/>
+				<NoticeContent text={text} onChange={setText} />
 			</form>
 		</div>
 	);

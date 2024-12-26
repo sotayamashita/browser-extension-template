@@ -1,14 +1,14 @@
 import { test, expect } from "./extention-fixtures";
 import { defaultOptions } from "@/option-default";
 
-test.describe("Chrome Extension Options Page", () => {
-	test.beforeEach(async ({ page, extensionId, optionsPage }) => {
-		await page.goto(`chrome-extension://${extensionId}/${optionsPage}`);
+test.describe("Chrome Extension Popup Page", () => {
+	test.beforeEach(async ({ page, extensionId, popupPage }) => {
+		await page.goto(`chrome-extension://${extensionId}/${popupPage}`);
 	});
 
 	test("should display the popup title", async ({ page }) => {
 		const title = page.locator("h1");
-		await expect(title).toHaveText("Extension Options");
+		await expect(title).toHaveText("Extension Popup");
 	});
 
 	test("should have default color values", async ({ page }) => {
