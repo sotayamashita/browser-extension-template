@@ -1,5 +1,5 @@
 import { test, expect } from "./extention-fixtures";
-import { defaultOptions } from "../src/option-default";
+import { defaultOptions } from "../src/options-storage";
 
 test.describe("Chrome Extension Options Page", () => {
   test.beforeEach(async ({ page, extensionId, optionsPage }) => {
