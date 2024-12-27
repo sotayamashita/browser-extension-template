@@ -18,8 +18,11 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
+
       - run: npm install
+
       - run: npm test
+
       - name: Get Playwright version
         id: playwright-version
         # Extract the package version by jq.

@@ -56,7 +56,7 @@ Note: When you create a repository from the template, the [Template Cleanup](.gi
 1. Run `npm install` to install all required dependencies
 1. Run `npm run build`
 
-The build step will create the `distribution` folder, this folder will contain the generated extension.
+The build step will create the `dist` folder, this folder will contain the generated extension.
 
 ### 🏃 Run the extension
 
