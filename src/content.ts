@@ -6,7 +6,7 @@ console.log("💈 Content script loaded for", browser.runtime.getManifest().name
 async function init() {
   const options = await optionsStorage.getAll();
   const color = `rgb(${options.colorRed}, ${options.colorGreen},${options.colorBlue})`;
-  const text = options.text;
+  const text = String(options.text);
   const notice = document.createElement("div");
   notice.innerHTML = text;
   document.body.prepend(notice);
