@@ -8,7 +8,7 @@
 [link-cws-keys]: https://github.com/fregante/chrome-webstore-upload-keys
 [link-amo-keys]: https://addons.mozilla.org/en-US/developers/addon/api/key
 
-[![Test](https://github.com/sotayamashita/browser-extension-template/actions/workflows/test.yml/badge.svg)](https://github.com/sotayamashita/browser-extension-template/actions/workflows/test.yml) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template?ref=badge_shield&issueType=license) 
+[![Test](https://github.com/sotayamashita/browser-extension-template/actions/workflows/test.yml/badge.svg)](https://github.com/sotayamashita/browser-extension-template/actions/workflows/test.yml) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsotayamashita%2Fbrowser-extension-template?ref=badge_shield&issueType=license) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 > Cross-browser extension boilerplate - barebones template with Parcel 2, options handler and auto-publishing.
 
