@@ -28,27 +28,34 @@ test.describe("Chrome Extension Options Page", () => {
     await expect(textInput).toHaveValue(defaultOptions.text);
   });
 
-  test("should update color input values", async ({ page }) => {
+  test("should update input values", async ({ page }) => {
     const colorRedInput = page.locator('input[type="number"][name="colorRed"]');
-    await colorRedInput.fill("255");
-    await expect(colorRedInput).toHaveValue("255");
+    await page.waitForTimeout(1000);
+    await colorRedInput.fill("0");
 
     const colorGreenInput = page.locator(
       'input[type="number"][name="colorGreen"]',
     );
-    await colorGreenInput.fill("255");
-    await expect(colorGreenInput).toHaveValue("255");
+    await page.waitForTimeout(1000);
+    await colorGreenInput.fill("0");
 
     const colorBlueInput = page.locator(
       'input[type="number"][name="colorBlue"]',
     );
-    await colorBlueInput.fill("255");
-    await expect(colorBlueInput).toHaveValue("255");
-  });
+    await page.waitForTimeout(1000);
+    await colorBlueInput.fill("0");
 
-  test("should update text input value", async ({ page }) => {
     const textInput = page.locator('input[type="text"][name="text"]');
+    await page.waitForTimeout(1000);
     await textInput.fill("Test notice content");
+
+    // Reload the page to see the changes
+    await page.reload();
+
+    // Check if the values are updated after reloading the page
+    await expect(colorRedInput).toHaveValue("0");
+    await expect(colorGreenInput).toHaveValue("0");
+    await expect(colorBlueInput).toHaveValue("0");
     await expect(textInput).toHaveValue("Test notice content");
   });
 });
