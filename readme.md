@@ -30,6 +30,7 @@ Screenshot of extension options:
 - stylelint
 + React
 + TypeScript
++ with commitizen for commit messages
 + with Prettier / Husky / lint-staged for linting
 + with Playwright for E2E tests
 + with Shadcn/UI and TailwindCSS for UI Components
@@ -38,6 +39,7 @@ Screenshot of extension options:
 Related PRs:
 
 - [Remove xo, eslint, and stylelint #5](https://github.com/sotayamashita/browser-extension-template/pull/5)
+- [Add commitizen #30](https://github.com/sotayamashita/browser-extension-template/pull/30)
 - [Add Prettier, husky and lint-staged #8](https://github.com/sotayamashita/browser-extension-template/pull/8)
 - [Add Playwright for E2E tests #11](https://github.com/sotayamashita/browser-extension-template/pull/11)
 - [Add TypeScript #17](https://github.com/sotayamashita/browser-extension-template/pull/17)
