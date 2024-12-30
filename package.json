@@ -14,7 +14,7 @@
     "fix:prettier": "npm run lint:prettier -- --write",
     "test": "run-p lint:* build",
     "e2e": "playwright test",
-    "cm": "git-cz --disable-emoji"
+    "cm": "cz"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.1",
@@ -39,11 +39,12 @@
     "@types/react-dom": "^19.0.2",
     "@types/webextension-polyfill": "^0.12.1",
     "class-variance-authority": "^0.7.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-tailwindcss": "^3.17.5",
-    "git-cz": "^4.9.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
@@ -61,7 +62,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "git-cz"
+      "path": "cz-conventional-changelog"
     }
   },
   "@parcel/resolver-default": {

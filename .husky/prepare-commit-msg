@@ -1,1 +1,1 @@
-exec < /dev/tty && npm run cm --hook || true
+exec < /dev/tty && npx cz --disable-emoji --hook || true
