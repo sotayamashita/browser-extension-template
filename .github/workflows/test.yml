@@ -1,8 +1,11 @@
 name: Test
 
 on:
-  - pull_request
-  - push
+  pull_request:
+  push:
+    # See https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushpull_requestpull_request_targetpathspaths-ignore
+    paths-ignore:
+      - "readme.md"
 
 jobs:
   security:
