@@ -1,8 +1,12 @@
 name: Test
 
 on:
-  - pull_request
-  - push
+  pull_request:
+    paths-ignore:
+      - "readme.md"
+  push:
+    paths-ignore:
+      - "readme.md"
 
 jobs:
   security:
