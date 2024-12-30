@@ -36,6 +36,8 @@ Screenshot of extension options:
 + with Shadcn/UI and TailwindCSS for UI Components
 ```
 
+test
+
 Related PRs:
 
 - [Remove xo, eslint, and stylelint #5](https://github.com/sotayamashita/browser-extension-template/pull/5)
