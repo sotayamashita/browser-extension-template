@@ -1,0 +1,1 @@
+exec < /dev/tty && npm run cm --hook || true

@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "commit": "git-cz --disable-emoji",
     "prepare": "husky",
     "prebuild": "rm -rf dist",
     "build": "NODE_NO_WARNINGS=1 parcel build --config @parcel/config-webextension",
@@ -14,7 +13,8 @@
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
     "test": "run-p lint:* build",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "cm": "git-cz --disable-emoji"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.1",
