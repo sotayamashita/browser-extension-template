@@ -38,13 +38,13 @@ Screenshot of extension options:
 
 Related PRs:
 
-- [Remove xo, eslint, and stylelint #5](https://github.com/sotayamashita/browser-extension-template/pull/5)
-- [Add commitizen #30](https://github.com/sotayamashita/browser-extension-template/pull/30)
-- [Add Prettier, husky and lint-staged #8](https://github.com/sotayamashita/browser-extension-template/pull/8)
-- [Add Playwright for E2E tests #11](https://github.com/sotayamashita/browser-extension-template/pull/11)
-- [Add TypeScript #17](https://github.com/sotayamashita/browser-extension-template/pull/17)
-- [Add React #18](https://github.com/sotayamashita/browser-extension-template/pull/18)
-- [Add shadcn/ui with tailwind #21](https://github.com/sotayamashita/browser-extension-template/pull/21)
+- Remove xo, eslint, and stylelint [#5](https://github.com/sotayamashita/browser-extension-template/pull/5)
+- Add commitizen [#30](https://github.com/sotayamashita/browser-extension-template/pull/30) [#32](https://github.com/sotayamashita/browser-extension-template/pull/32)
+- Add Prettier, husky and lint-staged [#8](https://github.com/sotayamashita/browser-extension-template/pull/8)
+- Add Playwright for E2E tests [#11](https://github.com/sotayamashita/browser-extension-template/pull/11)
+- Add TypeScript [#17](https://github.com/sotayamashita/browser-extension-template/pull/17)
+- Add React [#18](https://github.com/sotayamashita/browser-extension-template/pull/18)
+- Add shadcn/ui with tailwind [#21](https://github.com/sotayamashita/browser-extension-template/pull/21)
 
 ## Getting started
 
