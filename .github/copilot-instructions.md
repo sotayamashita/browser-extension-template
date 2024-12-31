@@ -22,6 +22,7 @@
 - Use modern JavaScript features and best practices
 - Prefer functional programming patterns; minimize use of classes
 - Use descriptive variable names (e.g., isExtensionEnabled, hasPermission)
+- Follow commitlint conventions for commit messages
 - Structure files:
   - manifest.json
   - background scripts
