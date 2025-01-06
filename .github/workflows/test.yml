@@ -1,16 +1,6 @@
 name: Test
 
-on:
-  pull_request:
-    paths-ignore:
-      - "readme.md"
-      - ".cursorrules"
-      - ".github/copilot-instructions.md"
-  push:
-    paths-ignore:
-      - "readme.md"
-      - ".cursorrules"
-      - ".github/copilot-instructions.md"
+on: [push, pull_request]
 
 jobs:
   security:
