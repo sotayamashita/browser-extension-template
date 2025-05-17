@@ -33,7 +33,7 @@
     "@parcel/config-webextension": "^2.13.0",
     "@parcel/resolver-default": "^2.13.0",
     "@playwright/test": "^1.49.1",
-    "@types/chrome": "^0.0.322",
+    "@types/chrome": "^0.0.323",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
