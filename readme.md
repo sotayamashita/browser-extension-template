@@ -1,3 +1,6 @@
+> [!NOTE]
+> I no longer use this. Instead, I've switched to [WXT Next-gen Web Extension Framework](https://wxt.dev/).
+
 # browser-extension-template
 
 [link-rgh]: https://github.com/sindresorhus/refined-github
